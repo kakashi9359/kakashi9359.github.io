@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Akash Dighade · Business Analytics</title>
+  <meta name="description" content="Akash Dighade — four years building data pipelines in industry, now an M.Sc Business Analytics student at University College Cork.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="nav" aria-label="Main">
+    <div class="wrap">
+      <a class="logo" href="#top">Home</a>
+      <ul>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="top">
+
+    <!-- ===================== HERO ===================== -->
+    <header class="hero">
+      <div class="wrap">
+        <p class="label">Akash Dighade · Business Analytics · Cork, Ireland</p>
+        <h1>I turn data into insights, <span class="soft">and sometimes into tools.</span></h1>
+        <p class="sub">Four years building data pipelines in industry. Now doing an M.Sc in Business Analytics at University College Cork.</p>
+        <div class="actions">
+          <a class="btn solid" href="#work">View work</a>
+          <!-- TODO: put your CV in the root folder as resume.pdf -->
+          <a class="btn" href="resume.pdf" target="_blank" rel="noopener">Résumé</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===================== WORK =====================
+         Two doors: Case studies and Projects.
+         The counts update automatically from content.js.
+         ================================================== -->
+    <section class="block" id="work">
+      <div class="wrap">
+        <div class="doors">
+          <a class="door t1" href="case-studies.html">
+            <div class="door-top">
+              <span class="label">Case studies</span>
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 40V8M8 40h32"/><path d="M15 32v-6M23 32V18M31 32v-9M39 32V12" stroke-linecap="round"/></svg>
+            </div>
+            <h2>Questions I've answered with data</h2>
+            <p>Each one comes with the notebook, dashboard or model behind it.</p>
+            <span class="door-go"><span data-count="caseStudies"></span><span aria-hidden="true">→</span></span>
+          </a>
+          <a class="door t5" href="projects.html">
+            <div class="door-top">
+              <span class="label">Projects</span>
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="7" y="9" width="34" height="30" rx="4"/><path d="M7 17h34"/><circle cx="12" cy="13" r="0.9" fill="currentColor"/><circle cx="16" cy="13" r="0.9" fill="currentColor"/><path d="M14 25l4 3-4 3M22 31h10" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h2>Things I've built</h2>
+            <p>Tools and apps people can actually use.</p>
+            <span class="door-go"><span data-count="projects"></span><span aria-hidden="true">→</span></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="block" id="about">
+      <div class="wrap">
+        <div class="about">
+
+          <!-- PROFILE PHOTO
+               Save your photo as images/profile.jpg
+               Portrait 4:5, at least 1000×1250px, soft light, plain background. -->
+          <div class="portrait">
+            <div class="ph" aria-hidden="true">
+              <svg viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="28" cy="21" r="9"/><path d="M11 47c2.5-8.5 9-13 17-13s14.5 4.5 17 13"/></svg>
+              <span>images/profile.jpg</span>
+            </div>
+            <img src="images/profile.jpg" alt="Portrait of Akash" data-fallback>
+          </div>
+
+          <div class="about-text">
+            <div class="intro">
+              <p>I'm Akash. For four years I made sure the data behind pharma sales-team pay was right.</p>
+              <p>As a Data Operations / Solutions Consultant, I built SQL and Python pipelines for incentive compensation and data quality. Now I'm adding the business side with an M.Sc at UCC.</p>
+            </div>
+
+            <div class="list">
+              <div>
+                <b>M.Sc Business Analytics</b><time>2026 – 27</time>
+                <span>University College Cork</span>
+              </div>
+              <div>
+                <!-- TODO: company name and years, e.g. 2022 – 26 -->
+                <b>Data Operations / Solutions Consultant</b><time>4 yrs</time>
+                <span>US pharmaceutical consulting company</span>
+              </div>
+            </div>
+
+            <p class="skills-line"><b>Tools</b> SQL, Python, Snowflake, Streamlit, Claude API &nbsp;·&nbsp; <b>Domain</b> incentive compensation, sell-in / sell-out, HCP master data</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="block contact" id="contact">
+      <div class="wrap">
+        <h2>Let's talk.</h2>
+        <p>Open to data and analytics roles in Ireland and across Europe.</p>
+        <div class="email-row">
+          <!-- TODO: your email -->
+          <span class="email" id="email">your.email@example.com</span>
+          <button class="btn" type="button" id="copy-email">Copy</button>
+        </div>
+        <div class="socials">
+          <a class="arrow-link" href="#" target="_blank" rel="noopener">LinkedIn</a> <!-- TODO -->
+          <a class="arrow-link" href="#" target="_blank" rel="noopener">GitHub</a> <!-- TODO -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap"><span>© 2026 Akash</span><span>Cork, Ireland</span></div>
+  </footer>
+
+  <script src="content.js"></script>
+  <script src="render.js"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Case study · Akash</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<!-- DATA CASE STUDY TEMPLATE
+     Copy this file for every data case study (e.g. work/churn.html),
+     then add an entry for it in content.js.
+     Sections: Question → Data → Approach → Finding → Artefact → Next.
+     Keep each section short. Replace every line of placeholder text. -->
+<body>
+
+  <nav class="nav" aria-label="Main">
+    <div class="wrap">
+      <a class="logo" href="../index.html">Home</a>
+      <ul><li><a href="../case-studies.html">All case studies</a></li></ul>
+    </div>
+  </nav>
+
+  <header class="study-head">
+    <div class="wrap">
+      <p class="label">Case study · Data science</p>
+      <h1>A data science case study</h1>
+      <p class="sub">One sentence on the business question this answers.</p>
+      <dl class="study-facts">
+        <div><dt>Data</dt><dd>Dataset and size</dd></div>
+        <div><dt>Result</dt><dd>Headline number</dd></div>
+        <div><dt>Method</dt><dd>Main technique</dd></div>
+        <div><dt>Artefact</dt><dd><a class="arrow-link" href="#artefact">Artefact</a></dd></div>
+      </dl>
+    </div>
+  </header>
+
+  <div class="study-hero">
+    <div class="wrap">
+      <!-- Save your best chart or artefact screenshot as images/case-study-hero.jpg (16:9) -->
+      <div class="media" style="--tint: var(--tint-1)" data-mark="images/case-study-hero.jpg">
+        <img src="../images/case-study-hero.jpg" alt="Main chart from the case study" data-fallback>
+      </div>
+    </div>
+  </div>
+
+  <article class="study-body">
+    <div class="wrap">
+      <section>
+        <h2>The question</h2>
+        <p>What problem were you solving, and who cared about the answer?</p>
+      </section>
+
+      <section>
+        <h2>The data</h2>
+        <p>Where the data came from, how big it was, and anything you had to clean or fix.</p>
+      </section>
+
+      <section>
+        <h2>Approach</h2>
+        <ul>
+          <li><strong>Step one.</strong> What you did first and why.</li>
+          <li><strong>Step two.</strong> How you tested or compared options.</li>
+          <li><strong>Step three.</strong> How you landed on the final approach.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Finding</h2>
+        <p class="pull">The one-sentence answer goes here.</p>
+        <p>The supporting detail and the numbers behind it.</p>
+      </section>
+
+      <section id="artefact">
+        <h2>Artefact</h2>
+        <div class="artefact-box">
+          <div>
+            <h3>Artefact name</h3>
+            <p>What it is (dashboard, notebook, model, deck) and what people can check in it.</p>
+          </div>
+          <a class="btn solid" href="#" target="_blank" rel="noopener">Open artefact ↗</a>
+        </div>
+      </section>
+
+      <section>
+        <h2>What I'd do next</h2>
+        <ul>
+          <li>An improvement you'd make with more time or data.</li>
+          <li>A question the analysis raised.</li>
+        </ul>
+      </section>
+
+      <a class="arrow-link" href="../case-studies.html">Back to all case studies</a>
+    </div>
+  </article>
+
+  <footer>
+    <div class="wrap"><span>© 2026 Akash</span><span>Cork, Ireland</span></div>
+  </footer>
+
+  <script>
+    document.querySelectorAll("img[data-fallback]").forEach((img) => {
+      const drop = () => img.remove();
+      if (img.complete && img.naturalWidth === 0) drop();
+      else img.addEventListener("error", drop);
+    });
+  </script>
+</body>
+</html>

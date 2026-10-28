@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Nudge · Akash</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<!-- CASE STUDY TEMPLATE
+     Copy this file for each project (e.g. work/myapp.html),
+     then add an entry for it in content.js.
+     Keep it short: Problem → Approach → What was hard → Result → Next. -->
+<body>
+
+  <nav class="nav" aria-label="Main">
+    <div class="wrap">
+      <a class="logo" href="../index.html">Home</a>
+      <ul><li><a href="../projects.html">All projects</a></li></ul>
+    </div>
+  </nav>
+
+  <header class="study-head">
+    <div class="wrap">
+      <p class="label">Case study · AI &amp; automation</p>
+      <h1>Nudge</h1>
+      <p class="sub">A to-do assistant for procrastinators that messages you first, instead of waiting to be opened.</p>
+      <dl class="study-facts">
+        <div><dt>Role</dt><dd>Solo build</dd></div>
+        <div><dt>Status</dt><dd>Live</dd></div>
+        <div><dt>Stack</dt><dd>Python, Claude API, SQLite</dd></div>
+        <div><dt>Code</dt><dd><a class="arrow-link" href="#" target="_blank" rel="noopener">GitHub</a></dd></div> <!-- TODO -->
+      </dl>
+    </div>
+  </header>
+
+  <div class="study-hero">
+    <div class="wrap">
+      <!-- TODO: save a screenshot or GIF as images/nudge-demo.gif -->
+      <div class="media" style="--tint: var(--tint-1)" data-mark="images/nudge-demo.gif">
+        <img src="../images/nudge-demo.gif" alt="Nudge sending a morning check-in" data-fallback>
+      </div>
+    </div>
+  </div>
+
+  <article class="study-body">
+    <div class="wrap">
+      <section>
+        <h2>The problem</h2>
+        <p>Productivity apps only work if you remember to open them. For people who procrastinate, that's the step that fails.</p>
+        <p class="pull">Interruption beats intention.</p>
+      </section>
+
+      <section>
+        <h2>Approach</h2>
+        <p>Nudge lives in Telegram, which is already on your phone. It checks in every morning and evening and manages tasks through normal conversation.</p>
+        <ul>
+          <li><strong>Conversation</strong> Claude Sonnet decides when to add, update or finish tasks using tool calls.</li>
+          <li><strong>Scheduling</strong> APScheduler, with jobs saved in SQLite so they survive restarts.</li>
+          <li><strong>Hosting</strong> Railway, with a persistent volume for the database.</li>
+        </ul>
+        <div class="code-scroll">bot/
+  handlers.py    Telegram messages
+  claude.py      Claude API calls
+  tools.py       task tools Claude can call
+  scheduler.py   morning and evening pings
+  database.py    SQLite access</div>
+      </section>
+
+      <section>
+        <h2>What was hard</h2>
+        <ul>
+          <li><strong>Missed morning pings.</strong> Scheduled messages sometimes didn't fire. Logging on each job showed where they failed.</li>
+          <li><strong>Network blocking.</strong> My ISP blocked Telegram's API, which looked like a code bug until I tested on a mobile hotspot.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Result</h2>
+        <!-- TODO: add real numbers if you have them -->
+        <p>Deployed and running daily.</p>
+      </section>
+
+      <section>
+        <h2>Next</h2>
+        <ul>
+          <li>Reminders set in plain language, like "remind me Friday at 3".</li>
+          <li>Showing one task at a time when the list gets long.</li>
+          <li>Flagging tasks that keep getting skipped.</li>
+        </ul>
+      </section>
+
+      <a class="arrow-link" href="../projects.html">Back to projects</a>
+    </div>
+  </article>
+
+  <footer>
+    <div class="wrap"><span>© 2026 Akash</span><span>Cork, Ireland</span></div>
+  </footer>
+
+  <script>
+    document.querySelectorAll("img[data-fallback]").forEach((img) => {
+      const drop = () => img.remove();
+      if (img.complete && img.naturalWidth === 0) drop();
+      else img.addEventListener("error", drop);
+    });
+  </script>
+</body>
+</html>
